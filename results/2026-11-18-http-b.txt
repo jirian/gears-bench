@@ -1,0 +1,52 @@
+
+/hello c=1
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           28738 [  28271-  29206]        32        54       0
+gears-nio-caller             30159 [  28346-  31972]        26        64       0
+gears-reference-main         31580 [  30041-  33118]        28        48       0
+gears-reference-now          30866 [  30847-  30884]        32        46       0
+gears-uring-before           11727 [  11437-  12017]        80       136       0
+gears-uring-stackless         19340 [  19152-  19529]        46        82       0
+gears-uring-main             22762 [  22383-  23140]        40        66       0
+gears-uring-spin             26566 [  26116-  27015]        34        56       0
+gears-uring-text3            32986 [  32461-  33512]        27        47       0
+gears-uring-duewatch         35992 [  35785-  36199]        24        44       0
+
+/hello c=64
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           73586 [  72600-  74573]       743      2622       0
+gears-nio-caller             80302 [  80106-  80499]       570      2072       0
+gears-reference-main         60636 [  59744-  61528]      1046      2734       0
+gears-reference-now          73212 [  72842-  73581]       849      2035       0
+gears-uring-before           23240 [  22955-  23524]      3422      5384       0
+gears-uring-stackless         35442 [  35222-  35661]      1724      2792       0
+gears-uring-main             45930 [  43142-  48717]      1320      2957       0
+gears-uring-spin             48794 [  48694-  48894]      1274      2364       0
+gears-uring-text3            64340 [  63702-  64979]       969      1778       0
+gears-uring-duewatch         75424 [  75026-  75823]       832      1566       0
+
+/items/42 c=1
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           26712 [  25476-  27947]        35        54       0
+gears-nio-caller             28655 [  28310-  29000]        33        58       0
+gears-reference-main         29651 [  29439-  29863]        31        48       0
+gears-reference-now          30008 [  29895-  30122]        30        51       0
+gears-uring-before           12550 [  12550-  12551]        76       109       0
+gears-uring-stackless         20412 [  20250-  20574]        44        77       0
+gears-uring-main             22858 [  21899-  23817]        40        69       0
+gears-uring-spin             25210 [  24880-  25541]        35        62       0
+gears-uring-text3            30236 [  29565-  30908]        28        52       0
+gears-uring-duewatch         33118 [  33051-  33185]        27        48       0
+
+/items/42 c=64
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           67064 [  65697-  68431]       814      2879       0
+gears-nio-caller             74387 [  73962-  74812]       704      2114       0
+gears-reference-main         61294 [  61229-  61360]      1056      2295       0
+gears-reference-now          69536 [  68990-  70081]       906      1894       0
+gears-uring-before           23831 [  23391-  24271]      3824      5612       0
+gears-uring-stackless         35699 [  34598-  36800]      1717      2876       0
+gears-uring-main             46529 [  46410-  46648]      1334      2430       0
+gears-uring-spin             46496 [  45882-  47111]      1332      2454       0
+gears-uring-text3            59094 [  58531-  59656]      1048      1882       0
+gears-uring-duewatch         65356 [  65149-  65562]       962      1726       0

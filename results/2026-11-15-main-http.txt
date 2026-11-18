@@ -1,0 +1,40 @@
+
+/hello c=1
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           28254 [  27792-  29405]        34        50       0
+gears-uring                  16798 [  16659-  16866]        56        83       0
+gears-uring-stackless         20558 [  20285-  20840]        44        73       0
+gears-uring-main             25040 [  24965-  25140]        37        60       0
+gears-nio-caller             29341 [  29135-  29498]        34        56       0
+gears-nio-linked             29866 [  29592-  29976]        30        56       0
+gears-reference-main         29533 [  29269-  31291]        33        48       0
+
+/hello c=64
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           73484 [  72626-  73486]       752      2475       0
+gears-uring                  32565 [  31873-  32568]      2371      3720       0
+gears-uring-stackless         35821 [  35799-  35823]      1715      2746       0
+gears-uring-main             48789 [  48525-  49041]      1271      2387       0
+gears-nio-caller             80368 [  79084-  81095]       514      1890       0
+gears-nio-linked             82861 [  82742-  85894]       600      1823       0
+gears-reference-main         59190 [  58448-  59574]      1092      2517       0
+
+/items/42 c=1
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           27625 [  27306-  27789]        34        50       0
+gears-uring                  17666 [  17590-  17774]        53        78       0
+gears-uring-stackless         20383 [  20258-  21114]        44        72       0
+gears-uring-main             24251 [  23869-  24596]        39        61       0
+gears-nio-caller             28759 [  28680-  29287]        34        56       0
+gears-nio-linked             29358 [  28871-  30631]        33        55       0
+gears-reference-main         28470 [  28337-  29716]        33        49       0
+
+/items/42 c=64
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           68792 [  68583-  68964]       798      2695       0
+gears-uring                  33869 [  33553-  34066]      2037      3417       0
+gears-uring-stackless         37152 [  37132-  37181]      1648      2657       0
+gears-uring-main             46595 [  46384-  46665]      1334      2442       0
+gears-nio-caller             78420 [  78182-  80082]       559      1561       0
+gears-nio-linked             83057 [  83036-  83915]       451      1651       0
+gears-reference-main         59616 [  59202-  59651]      1095      2414       0

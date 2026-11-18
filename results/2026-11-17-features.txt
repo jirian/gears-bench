@@ -1,0 +1,28 @@
+
+/hello c=1
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           30742 [  29874-  31138]        30        46       0
+gears-uring-text3            34358 [  33754-  34480]        26        45       0
+gears-uring-noabandon         38390 [  38019-  38888]        23        41       0
+gears-uring-nolimits         39859 [  39783-  40805]        22        40       0
+
+/hello c=64
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           74432 [  74051-  74694]       739      2471       0
+gears-uring-text3            65341 [  64910-  65666]       958      1882       0
+gears-uring-noabandon         75312 [  75051-  75536]       836      1558       0
+gears-uring-nolimits         80033 [  79848-  80250]       783      1502       0
+
+/items/42 c=1
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           29236 [  28420-  29630]        32        49       0
+gears-uring-text3            33650 [  33249-  33779]        27        44       0
+gears-uring-noabandon         34989 [  34370-  35076]        25        44       0
+gears-uring-nolimits         37008 [  36911-  37361]        24        41       0
+
+/items/42 c=64
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           70629 [  68785-  70918]       780      2606       0
+gears-uring-text3            61053 [  60788-  61228]      1029      2008       0
+gears-uring-noabandon         68147 [  67365-  68320]       931      1646       0
+gears-uring-nolimits         71709 [  71210-  72311]       883      1600       0

@@ -1,0 +1,24 @@
+
+/hello c=1
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           20474 [  20315-  20647]        47        77       0
+gears-uring                  12212 [  12078-  12353]        80       120       0
+gears-uring-runtime-nightly         14506 [  14376-  14574]        70       104       0
+
+/hello c=64
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           58590 [  58340-  59699]       940      3227       0
+gears-uring                  24254 [  24115-  24438]      3207      4961       0
+gears-uring-runtime-nightly         27750 [  27573-  28090]      2240      3595       0
+
+/items/42 c=1
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           19788 [  19579-  19831]        49        79       0
+gears-uring                  12538 [  12521-  12963]        78       129       0
+gears-uring-runtime-nightly         15197 [  15190-  15329]        66        93       0
+
+/items/42 c=64
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           57087 [  57050-  57256]       964      3242       0
+gears-uring                  25989 [  25781-  26412]      2835      4586       0
+gears-uring-runtime-nightly         28286 [  28256-  29431]      2150      3842       0

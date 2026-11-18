@@ -1,0 +1,27 @@
+round 1/3 go /hello c=1: {'rps': 17332.0, 'p50': 52.0, 'p99': 128.0, 'p999': 1048.0, 'errors': 0}
+round 1/3 go /hello c=64: {'rps': 57508.0, 'p50': 957.0, 'p99': 3313.0, 'p999': 5481.0, 'errors': 0}
+round 1/3 go /items/42 c=1: {'rps': 18628.0, 'p50': 51.0, 'p99': 99.0, 'p999': 360.0, 'errors': 0}
+round 1/3 go /items/42 c=64: {'rps': 52545.0, 'p50': 1035.0, 'p99': 3840.0, 'p999': 6194.0, 'errors': 0}
+round 1/3 gears-uring /hello c=1: {'rps': 10020.0, 'p50': 89.0, 'p99': 348.0, 'p999': 1420.0, 'errors': 0}
+round 1/3 gears-uring /hello c=64: {'rps': 20259.0, 'p50': 3732.0, 'p99': 9354.0, 'p999': 13790.0, 'errors': 0}
+round 1/3 gears-uring /items/42 c=1: {'rps': 10770.0, 'p50': 83.0, 'p99': 275.0, 'p999': 1442.0, 'errors': 0}
+round 1/3 gears-uring /items/42 c=64: {'rps': 22782.0, 'p50': 3901.0, 'p99': 7512.0, 'p999': 10847.0, 'errors': 0}
+round 1/3 gears-uring-runtime /hello c=1: {'rps': 12682.0, 'p50': 75.0, 'p99': 171.0, 'p999': 689.0, 'errors': 0}
+round 1/3 gears-uring-runtime /hello c=64: {'rps': 24630.0, 'p50': 2451.0, 'p99': 4132.0, 'p999': 5677.0, 'errors': 1}
+round 1/3 gears-uring-runtime /items/42 c=1: {'rps': 13892.0, 'p50': 70.0, 'p99': 123.0, 'p999': 605.0, 'errors': 0}
+Traceback (most recent call last):
+  File "http_bench.py", line 131, in <module>
+    main(sys.argv[1:])
+  File "http_bench.py", line 99, in main
+    m = load(port, path, conns, seconds, warmup, load_cpus)
+  File "http_bench.py", line 46, in load
+    out = subprocess.run(
+  File "~/.pyenv/versions/3.10.16/lib/python3.10/subprocess.py", line 505, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "~/.pyenv/versions/3.10.16/lib/python3.10/subprocess.py", line 1154, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "~/.pyenv/versions/3.10.16/lib/python3.10/subprocess.py", line 2022, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "~/.pyenv/versions/3.10.16/lib/python3.10/subprocess.py", line 1198, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['taskset', '-c', '4,5,6,7', 'http-bench/loadgen.bin', '-addr', '127.0.0.1:18103', '-path', '/items/42', '-c', '64', '-d', '10s', '-w', '2s']' timed out after 72 seconds

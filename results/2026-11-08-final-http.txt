@@ -1,0 +1,32 @@
+
+/hello c=1
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           17151 [  16586-  17598]        52       131       0
+gears-uring                   9788 [   9113-  10378]        90       354       0
+gears-uring-stackless         11902 [  11043-  11973]        78       256       0
+gears-nio-caller             15646 [  15290-  16038]        57       194       0
+gears-nio-linked             16050 [  14799-  18652]        54       260       0
+
+/hello c=64
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           53966 [  53763-  54082]      1012      3787       0
+gears-uring                  19587 [  18343-  19818]      3811      8342       0
+gears-uring-stackless         23790 [  23108-  24474]      2557      4858       0
+gears-nio-caller             50514 [  47632-  57652]      1144      4802       0
+gears-nio-linked             56965 [  55586-  59305]      1004      4378       0
+
+/items/42 c=1
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           14725 [  14606-  15513]        57       234       0
+gears-uring                  10695 [  10323-  12313]        84       262       0
+gears-uring-stackless         12328 [  12304-  12765]        73       201       0
+gears-nio-caller             17278 [  14986-  17466]        57       118       0
+gears-nio-linked             17468 [  16612-  18032]        54       188       0
+
+/items/42 c=64
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           48204 [  45457-  50350]      1101      4950       0
+gears-uring                  22426 [  20164-  23022]      3109      7373       0
+gears-uring-stackless         23903 [  22718-  24716]      2481      6347       0
+gears-nio-caller             54033 [  46596-  57305]      1115      3551       0
+gears-nio-linked             59609 [  58505-  62471]      1000      2933       0

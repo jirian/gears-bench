@@ -1,0 +1,53 @@
+results/2026-11-18-http.log: round 4 incomplete (17/40), dropped
+
+/hello c=1
+server                        rounds  req/s median [q1-q3]       p50 us  p99 us  errors
+go                                5     29324 [  29206-  30558]       31      53      0
+gears-nio-caller                  5     28346 [  27081-  28455]       30      63      0
+gears-reference-main              5     30449 [  30041-  30531]       29      50      0
+gears-reference-now               5     31688 [  30884-  31969]       29      47      0
+gears-uring-before                5     12017 [  11571-  12132]       77     136      0
+gears-uring-stackless             5     19722 [  19529-  20396]       45      87      0
+gears-uring-main                  5     24353 [  23140-  24610]       38      66      0
+gears-uring-spin                  5     26116 [  25588-  26472]       34      62      0
+gears-uring-text3                 5     32461 [  31422-  32988]       27      50      0
+gears-uring-duewatch              5     35785 [  35263-  36199]       24      45      0
+
+/hello c=64
+server                        rounds  req/s median [q1-q3]       p50 us  p99 us  errors
+go                                5     72811 [  72600-  72924]      756    2608      0
+gears-nio-caller                  5     78808 [  77913-  80106]      549    2137      0
+gears-reference-main              5     61528 [  60582-  61973]     1031    2655      0
+gears-reference-now               5     71760 [  71300-  72842]      899    1954      0
+gears-uring-before                5     23387 [  22955-  23524]     3171    5016      0
+gears-uring-stackless             5     35336 [  35222-  35533]     1726    2801      0
+gears-uring-main                  5     47891 [  47872-  48549]     1295    2376      0
+gears-uring-spin                  5     48694 [  48441-  48894]     1279    2368      0
+gears-uring-text3                 5     64268 [  63702-  64280]      970    1784      0
+gears-uring-duewatch              5     75026 [  74210-  75576]      839    1587      0
+
+/items/42 c=1
+server                        rounds  req/s median [q1-q3]       p50 us  p99 us  errors
+go                                5     27947 [  27598-  28295]       33      50      0
+gears-nio-caller                  5     28533 [  28310-  28924]       33      58      0
+gears-reference-main              5     29863 [  29740-  30034]       30      49      0
+gears-reference-now               5     30041 [  29895-  30122]       31      46      0
+gears-uring-before                5     12551 [  12550-  12584]       76     108      0
+gears-uring-stackless             5     20574 [  20250-  21276]       44      69      0
+gears-uring-main                  5     23817 [  23132-  24043]       39      60      0
+gears-uring-spin                  5     24915 [  24880-  25541]       35      61      0
+gears-uring-text3                 5     31328 [  30908-  31495]       28      51      0
+gears-uring-duewatch              5     33185 [  33051-  33356]       27      47      0
+
+/items/42 c=64
+server                        rounds  req/s median [q1-q3]       p50 us  p99 us  errors
+go                                5     68431 [  68173-  68736]      797    2812      0
+gears-nio-caller                  5     74812 [  74230-  76563]      629    2079      0
+gears-reference-main              5     62586 [  61360-  62620]     1040    2149      0
+gears-reference-now               5     68990 [  67168-  69766]      914    1996      0
+gears-uring-before                5     23601 [  23391-  23804]     3314    5020      0
+gears-uring-stackless             5     35919 [  35804-  36800]     1702    2723      0
+gears-uring-main                  5     46648 [  46410-  46808]     1329    2435      0
+gears-uring-spin                  5     47111 [  45882-  47267]     1319    2431      0
+gears-uring-text3                 5     59656 [  58531-  61251]     1038    1893      0
+gears-uring-duewatch              5     65562 [  65182-  67629]      958    1725      0

@@ -1,0 +1,28 @@
+
+/hello c=1
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           28418 [  28401-  28641]        33        51       0
+gears-uring-conngroup         34248 [  32733-  35223]        25        47       0
+gears-uring-tick             34282 [  33457-  34701]        26        46       0
+gears-uring-noabandon         36213 [  35922-  37612]        24        45       0
+
+/hello c=64
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           70621 [  68931-  72415]       770      2804       0
+gears-uring-conngroup         67690 [  65436-  68794]       922      1759       0
+gears-uring-tick             68903 [  67345-  69533]       907      1715       0
+gears-uring-noabandon         75706 [  75282-  77323]       830      1561       0
+
+/items/42 c=1
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           27537 [  26812-  28824]        34        53       0
+gears-uring-conngroup         31801 [  31775-  31896]        27        49       0
+gears-uring-tick             32932 [  32597-  32944]        27        47       0
+gears-uring-noabandon         33138 [  32689-  33795]        26        46       0
+
+/items/42 c=64
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           68936 [  67599-  69594]       795      2732       0
+gears-uring-conngroup         62576 [  62309-  63404]      1006      1992       0
+gears-uring-tick             61313 [  60276-  61656]      1031      1847       0
+gears-uring-noabandon         67651 [  66225-  68577]       939      1662       0

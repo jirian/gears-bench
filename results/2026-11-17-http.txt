@@ -1,0 +1,32 @@
+
+/hello c=1
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           28755 [  28744-  29067]        33        47       0
+gears-nio-caller             28221 [  28206-  28760]        36        55       0
+gears-uring-spin             27744 [  27485-  27886]        33        52       0
+gears-uring-text2            33464 [  33117-  34418]        27        45       0
+gears-uring-text3            34221 [  34073-  35061]        26        44       0
+
+/hello c=64
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           71430 [  71351-  71551]       771      2549       0
+gears-nio-caller             83877 [  80275-  84210]       605      1741       0
+gears-uring-spin             48802 [  48491-  48805]      1283      2328       0
+gears-uring-text2            60340 [  60327-  60793]      1041      1809       0
+gears-uring-text3            64284 [  64270-  64366]       978      1742       0
+
+/items/42 c=1
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           27763 [  27682-  28341]        34        49       0
+gears-nio-caller             27960 [  27272-  28101]        37        54       0
+gears-uring-spin             27063 [  26952-  27400]        34        53       0
+gears-uring-text2            32902 [  32282-  32942]        28        45       0
+gears-uring-text3            33415 [  32818-  33620]        27        44       0
+
+/items/42 c=64
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           67820 [  67593-  67914]       814      2721       0
+gears-nio-caller             78002 [  77189-  78914]       628      1394       0
+gears-uring-spin             46374 [  46357-  46616]      1347      2409       0
+gears-uring-text2            58323 [  57809-  58563]      1086      2048       0
+gears-uring-text3            59872 [  59544-  60498]      1052      1988       0

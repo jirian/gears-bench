@@ -1,0 +1,24 @@
+
+/hello c=1
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           27853 [  27437-  28496]        34        49       0
+gears-uring-text3            33602 [  32633-  34017]        27        45       0
+gears-uring-text4            33381 [  31829-  34008]        27        45       0
+
+/hello c=64
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           70597 [  70512-  70625]       783      2577       0
+gears-uring-text3            63475 [  63394-  63616]       980      1759       0
+gears-uring-text4            63814 [  63432-  66014]       994      1786       0
+
+/items/42 c=1
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           27218 [  27064-  27221]        35        50       0
+gears-uring-text3            31748 [  31096-  32459]        28        46       0
+gears-uring-text4            32150 [  32139-  32403]        28        45       0
+
+/items/42 c=64
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           67246 [  67188-  67369]       819      2740       0
+gears-uring-text3            58802 [  58794-  59561]      1068      1971       0
+gears-uring-text4            58155 [  57847-  60600]      1077      1943       0

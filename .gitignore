@@ -1,0 +1,22 @@
+# Only the benchmark harness and its result summaries are tracked: everything else here (binaries, builds, profiles,
+# build logs, other validation tooling) stays local.
+/*
+!/.gitignore
+!/README.md
+!/bench_runner.py
+!/http_bench.py
+!/merge_http_logs.py
+!/http-bench/
+/http-bench/*.bin
+!/perf/
+!/results/
+/results/*
+!/results/*.txt
+!/results/*.json
+!/results/*.log
+# sbt build and test logs, not benchmark output
+/results/2026-11-06-http-native-nightly.log
+/results/2026-11-06-jvm-fmt.log
+/results/2026-11-06-split-jvm.log
+/results/2026-11-06-split-native.log
+/results/2026-11-06-uring-nightly.log

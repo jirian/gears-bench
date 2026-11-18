@@ -1,0 +1,12 @@
+
+/hello c=64
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           34800 [  33406-  35832]      1489      7229       0
+gears-uring-text2            29946 [  29497-  29999]      1919      5617       0
+gears-uring-text3            30420 [  25212-  30746]      1858      5888       0
+
+/items/42 c=64
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           33674 [  33249-  34021]      1559      7310       0
+gears-uring-text2            27402 [  27297-  27845]      2076      6291       0
+gears-uring-text3            28906 [  27143-  29219]      1964      5962       0

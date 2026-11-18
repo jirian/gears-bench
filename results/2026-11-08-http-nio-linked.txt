@@ -1,0 +1,24 @@
+
+/hello c=1
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           19164 [  19040-  20084]        49        92       0
+gears-nio-caller             19826 [  19256-  19931]        51        96       0
+gears-nio-linked             19749 [  19434-  20148]        51        97       0
+
+/hello c=64
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           58399 [  57932-  58967]       944      3200       0
+gears-nio-caller             61561 [  59257-  61970]       943      3676       0
+gears-nio-linked             62046 [  60558-  64377]       930      3914       0
+
+/items/42 c=1
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           19291 [  19190-  19352]        50        90       0
+gears-nio-caller             19219 [  18794-  19334]        53       103       0
+gears-nio-linked             20417 [  20388-  20474]        50        95       0
+
+/items/42 c=64
+server                          req/s median [q1-q3]    p50 us    p99 us  errors
+go                           56207 [  54384-  56481]       980      3322       0
+gears-nio-caller             62387 [  61648-  62911]       972      2761       0
+gears-nio-linked             64722 [  64503-  65753]       905      2740       0

@@ -1,0 +1,307 @@
+{
+ "date": "2026-11-15 22:16",
+ "runs": 5,
+ "cpus": "2,3",
+ "args": [
+  "--scenarios",
+  "pingpong,pingpong-deadline,pingpong-pooled,pipelined,timers,concurrent,connections"
+ ],
+ "builds": {
+  "main": [
+   "bench-builds/iouringdemos-main",
+   "bench"
+  ],
+  "spin0": [
+   "env",
+   "GEARS_URING_SPIN=0",
+   "bench-builds/iouringdemos-spin",
+   "bench"
+  ],
+  "spin5": [
+   "env",
+   "GEARS_URING_SPIN=5000",
+   "bench-builds/iouringdemos-spin",
+   "bench"
+  ],
+  "spin10": [
+   "env",
+   "GEARS_URING_SPIN=10000",
+   "bench-builds/iouringdemos-spin",
+   "bench"
+  ],
+  "spin20": [
+   "env",
+   "GEARS_URING_SPIN=20000",
+   "bench-builds/iouringdemos-spin",
+   "bench"
+  ]
+ },
+ "load_before": [
+  "2.62",
+  "1.48",
+  "0.72"
+ ],
+ "load_after": [
+  "1.73",
+  "1.52",
+  "0.84"
+ ],
+ "results": {
+  "main": {
+   "pingpong": [
+    13.16,
+    13.68,
+    16.12,
+    13.41,
+    13.82
+   ],
+   "pingpong-deadline": [
+    13.43,
+    16.73,
+    15.59,
+    14.27,
+    15.07
+   ],
+   "pingpong-pooled": [
+    12.66,
+    14.68,
+    15.17,
+    13.79,
+    14.1
+   ],
+   "pipelined": [
+    0.9,
+    1.04,
+    1.03,
+    1.26,
+    0.93
+   ],
+   "timers": [
+    10.34,
+    10.7,
+    10.85,
+    11.32,
+    10.68
+   ],
+   "concurrent": [
+    6.03,
+    6.43,
+    6.56,
+    6.43,
+    7.06
+   ],
+   "connections": [
+    38.15,
+    38.96,
+    38.83,
+    34.19,
+    37.85
+   ]
+  },
+  "spin0": {
+   "pingpong": [
+    13.01,
+    14.51,
+    14.42,
+    13.29,
+    13.85
+   ],
+   "pingpong-deadline": [
+    13.5,
+    15.18,
+    14.94,
+    13.49,
+    14.52
+   ],
+   "pingpong-pooled": [
+    12.75,
+    14.4,
+    14.63,
+    14.15,
+    14.06
+   ],
+   "pipelined": [
+    0.99,
+    1.05,
+    1.02,
+    0.94,
+    0.93
+   ],
+   "timers": [
+    11.21,
+    10.83,
+    10.78,
+    11.16,
+    10.83
+   ],
+   "concurrent": [
+    6.35,
+    6.14,
+    6.56,
+    6.35,
+    6.49
+   ],
+   "connections": [
+    38.99,
+    40.66,
+    38.36,
+    34.46,
+    35.3
+   ]
+  },
+  "spin5": {
+   "pingpong": [
+    7.16,
+    7.93,
+    7.34,
+    7.36,
+    7.37
+   ],
+   "pingpong-deadline": [
+    8.21,
+    8.75,
+    8.3,
+    8.24,
+    7.99
+   ],
+   "pingpong-pooled": [
+    7.82,
+    8.18,
+    7.75,
+    7.53,
+    7.29
+   ],
+   "pipelined": [
+    1.0,
+    1.08,
+    1.02,
+    1.03,
+    1.02
+   ],
+   "timers": [
+    11.24,
+    11.31,
+    11.03,
+    11.38,
+    11.56
+   ],
+   "concurrent": [
+    6.89,
+    6.6,
+    6.4,
+    7.07,
+    6.51
+   ],
+   "connections": [
+    34.46,
+    35.5,
+    37.64,
+    35.29,
+    35.47
+   ]
+  },
+  "spin10": {
+   "pingpong": [
+    6.97,
+    7.02,
+    7.96,
+    7.13,
+    7.42
+   ],
+   "pingpong-deadline": [
+    7.86,
+    7.95,
+    10.04,
+    8.34,
+    7.78
+   ],
+   "pingpong-pooled": [
+    7.85,
+    7.91,
+    8.9,
+    7.33,
+    7.8
+   ],
+   "pipelined": [
+    0.93,
+    1.03,
+    1.08,
+    1.03,
+    1.04
+   ],
+   "timers": [
+    10.88,
+    11.5,
+    11.47,
+    11.48,
+    11.41
+   ],
+   "concurrent": [
+    6.49,
+    6.56,
+    6.54,
+    6.39,
+    6.25
+   ],
+   "connections": [
+    30.19,
+    31.38,
+    31.01,
+    30.63,
+    30.93
+   ]
+  },
+  "spin20": {
+   "pingpong": [
+    6.97,
+    7.8,
+    7.07,
+    7.25,
+    7.02
+   ],
+   "pingpong-deadline": [
+    7.97,
+    8.47,
+    7.61,
+    7.57,
+    7.7
+   ],
+   "pingpong-pooled": [
+    7.13,
+    7.58,
+    7.57,
+    7.28,
+    7.3
+   ],
+   "pipelined": [
+    0.94,
+    1.02,
+    1.02,
+    1.03,
+    1.03
+   ],
+   "timers": [
+    11.38,
+    10.77,
+    11.5,
+    11.54,
+    11.59
+   ],
+   "concurrent": [
+    6.31,
+    7.5,
+    6.3,
+    6.42,
+    6.38
+   ],
+   "connections": [
+    32.28,
+    35.58,
+    30.54,
+    30.84,
+    30.39
+   ]
+  }
+ },
+ "failures": []
+}
