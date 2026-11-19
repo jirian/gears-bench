@@ -3,6 +3,7 @@
 /*
 !/.gitignore
 !/README.md
+!/LICENSE
 !/bench_runner.py
 !/http_bench.py
 !/merge_http_logs.py

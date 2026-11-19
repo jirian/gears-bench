@@ -61,3 +61,7 @@ kept beside them. Which gears commit each of the other builds came from was not 
 
 Absolute paths in the recorded commands and logs were rewritten relative to this directory before publishing; nothing
 else in the results was changed.
+
+## Licence
+
+Apache License 2.0, as Gears itself; see `LICENSE`.
