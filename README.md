@@ -19,6 +19,7 @@ Linux only: the runs are pinned to cores with `taskset`, and the native builds r
 | `http-bench/loadgen` | A closed-loop HTTP/1.1 load generator over raw sockets: requests per second and latency percentiles. |
 | `perf/` | `profile.sh` profiles a server under load (user-space `perf`, last calls via `-j any_call`); `callers.py` summarises it. |
 | `results/` | Every run: the table (`.txt`), its data (`.json`) and the log of its rounds (`.log`), named by date. |
+| `results/perf-*/` | Each profile's CPU split over 5 s (`split.txt`), its load (`load.txt`) and, for two, the flat symbol profile (`flat_all.tsv`); the recordings themselves stay local. |
 
 ## Running
 

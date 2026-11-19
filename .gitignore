@@ -15,6 +15,12 @@
 !/results/*.txt
 !/results/*.json
 !/results/*.log
+# From each profile, only its CPU split, its load and its flat symbol profile; perf.data and scripts stay local
+!/results/perf-*/
+/results/perf-*/*
+!/results/perf-*/split.txt
+!/results/perf-*/load.txt
+!/results/perf-*/flat_all.tsv
 # sbt build and test logs, not benchmark output
 /results/2026-11-06-http-native-nightly.log
 /results/2026-11-06-jvm-fmt.log

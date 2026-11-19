@@ -1,0 +1,1 @@
+user_ticks 664 sys_ticks 220 vol_ctxsw 411 (5 s)

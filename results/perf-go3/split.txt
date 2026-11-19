@@ -1,0 +1,1 @@
+user_ticks 504 sys_ticks 330 (5 s)
